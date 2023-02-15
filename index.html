@@ -1,66 +1,84 @@
 <!DOCTYPE html>
 
 <html>
-	<head>
-		<title>Google</title>
-		<style type="text/css">
-			body {
-				background: url(background.jpg);
-			}
-			table {
-				margin-left: auto;
-				margin-right: auto;
-				margin-top: 12%;
-				text-align: center;
-			}
-			#search-box  input {
-				background-color: #121212;
-				border: 1px solid #303030;
-				color: #ffffff;
-				width: 500px;
-				height: 26px;
-				font-size: 18px;
-				padding-left: 5px;
-				padding-right: 5px;
-				vertical-align: middle;
-			}
-			#button {
-				display: inline-block;
-				background-color: #121212;
-				border: 1px solid #ffffff;
-				border-radius: 2px 2px 2px 2px;
-				width: 70px;
-				height: 32px;
-				vertical-align: middle;
-			}
-			#button:hover {
-				background-color: #303030;
-			}
-			#icon {
-				display: inline-block;
-				background: url(go.png) no-repeat;
-				height: 16px;
-				width: 16px;
-				vertical-align: middle;
-			}
-		</style>
-	</head>
-	<body>
-		<table>
-			<tr>
-				<td>
-					<a href="https://www.google.com/ncr"><img src="logo.png" /></a>
-					<br /><br />
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<form method="get" action="https://www.google.com/search" name="search" id="search-box">
-						<input name="q" autofocus>
-						<button id="button"><span id="icon"></span></button>
-					</form>
-				</td>
-			</tr>
-		</table>
-	</body>
+  <head>
+    <title>Google</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: url(background.jpg);
+      }
+      div {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%);
+        text-align: center;
+      }
+      form {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+      }
+      input {
+        background-color: #121212;
+        border: none;
+        border-radius: 1rem;
+        color: white;
+        width: 450px;
+        height: 2rem;
+        font-size: 18px;
+        padding: 0 3rem 0 1rem;
+      }
+      button {
+        position: absolute;
+        width: 2.5rem;
+        height: 2rem;
+        background-color: #121212;
+        color: white;
+        border: none;
+        border-radius: 1rem;
+        right: 0;
+      }
+      button:hover {
+        background-color: white;
+        color: black;
+      }
+      .absolute-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="https://www.google.com/ncr"><img src="logo.png" /></a>
+      <form method="get" action="https://www.google.com/search">
+        <input name="q" autofocus />
+        <button type="submit">
+          <svg
+            class="absolute-center"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+            />
+          </svg>
+        </button>
+      </form>
+    </div>
+  </body>
 </html>
