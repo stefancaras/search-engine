@@ -3,37 +3,42 @@
 <html>
   <head>
     <title>Google</title>
+    <link rel="icon" type="image/x-icon" href="./icon.png">
     <style>
-      body {
-        background: url(background.jpg) fixed center / cover;
+      html {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(40deg, #0f0766, #e01171);
       }
       div {
         text-align: center;
-        margin-top: 25vh;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 5rem;
       }
       form {
-        position: relative;
-        width: fit-content;
-        margin: 1.5rem auto 3rem auto;
+        margin: 3rem 0 10rem 0;
       }
       input {
         background-color: #121212;
         border: none;
-        border-radius: 1rem;
+        border-radius: 1.5rem;
         color: white;
-        width: 400px;
-        height: 2rem;
-        font-size: 18px;
-        padding: 0 3rem 0 1rem;
+        width: 30rem;
+        height: 3rem;
+        font-size: 1.2rem;
+        padding: 0 5rem 0 1.5rem;
       }
       button {
         position: absolute;
-        width: 2.5rem;
-        height: 2rem;
+        width: 4rem;
+        height: 3rem;
         background-color: #121212;
         color: white;
         border: none;
-        border-radius: 1rem;
+        border-radius: 1.5rem;
         right: 0;
         cursor: pointer;
       }
@@ -50,16 +55,16 @@
     </style>
   </head>
   <body>
-    <div>
-      <a href="https://www.google.com/ncr"><img src="logo.png" /></a>
+    <div class="absolute-center">
+      <a href="https://www.google.com/ncr">Google</a>
       <form method="get" action="https://www.google.com/search">
         <input name="q" autofocus />
         <button type="submit">
           <svg
             class="absolute-center"
             xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
+            width="24"
+            height="24"
             fill="currentColor"
             class="bi bi-search"
             viewBox="0 0 16 16"
